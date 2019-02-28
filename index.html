@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ВикиПоиск</title>
+    <title>WikiSearch</title>
 </head>
 <body>
 <div style="text-align: center;">
-    <h1>ВикиПоиск</h1>
-    <form>
-        <p>
-            <input type="search" id="search" placeholder="Поиск по сайту"/>
-            <input type="submit" id="submit" value="Найти" onclick="getData()"/>
-        </p>
-    </form>
-    <div id="loadedPage"></div>
+    <h1>WikiSearch</h1>
+    <p>
+        <input type="search" id="search" placeholder="Поиск по сайту"/>
+        <input type="submit" id="submit" value="Найти" onclick="fetchResults(document.getElementById('search').value)"/>
+    </p>
+    <div id="empty"></div>
+    <table id="dataTable" border="1"></table>
 </div>
 <script src="main.js"></script>
 </body>
